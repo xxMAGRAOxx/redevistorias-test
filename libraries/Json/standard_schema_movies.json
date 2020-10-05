@@ -1,0 +1,12 @@
+{
+    "description": "Movies",
+    "type": "object",
+    "properties": {
+        "filter": {
+            "type": "string",
+            "enum": ["lucas", "release", "machete", "magnotta", "rinster", "lee"],
+            "required": true
+        }
+    },
+    "additionalProperties": false
+}

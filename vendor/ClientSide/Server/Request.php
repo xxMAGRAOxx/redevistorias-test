@@ -199,8 +199,6 @@ class Request
         $this->_return = curl_exec($this->curlHandler);
         $this->_readableReturn = json_decode($this->_return, true);
 
-        var_dump($this->_return);exit;
-
         $this->_status = curl_getinfo($this->curlHandler,CURLINFO_HTTP_CODE);
         curl_close($this->curlHandler);
 
@@ -226,13 +224,6 @@ class Request
         return @$this->_readableReturn['code'];
     }
 
-    /**
-     * @return mixed
-     */
-    public function getHttpTitle()
-    {
-        return @$this->_readableReturn['http_title'];
-    }
 
     /**
      * @return mixed
@@ -240,13 +231,5 @@ class Request
     public function getResponse()
     {
         return @$this->_readableReturn;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function __toString()
-    {
-        return $this->getResponse();
     }
 }

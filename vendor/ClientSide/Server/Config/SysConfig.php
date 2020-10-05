@@ -28,6 +28,7 @@ class SysConfig {
      */
     public static $BASE_MOVIES = 'films/';
 
+
     /**
      * @var array
      */
